@@ -1,0 +1,61 @@
+<h1>{{title}}!</h1>
+
+  <li *ngFor="let user of users">{{user.id}} - {{user.userName}}</li>
+
+  <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="users.length">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>PasswordHash</th>
+        <th>PasswordSalt</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td width="20%">{{user.id}}</td>
+        <td width="30%">{{user.userName}}</td>
+        <td width="40%">{{user.passwordHash}}</td>
+        <td width="30%">{{user.passwordSalt}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="container">
+  <div class="row">
+    <div class="col-2">
+      <a class="btn btn-primary w-75">Primary</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-warning w-75">Warning</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-success w-75">Success</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-danger w-75">Danger</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-info w-75">Info</a>
+    </div>
+  </div>
+
+  <div class="row p-3">
+    <div class="col-2">
+      <a class="btn btn-outline-primary w-75">Outline Primary</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-outline-warning w-75">Outline Warning</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-outline-success w-75">Outline Success</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-outline-danger w-75">Outline Danger</a>
+    </div>
+    <div class="col-2">
+      <a class="btn btn-outline-info w-75">Outline Info</a>
+    </div>
+  </div>
+
+</div>
